@@ -9,15 +9,17 @@ func main() {
 	shadowing()
 	firstapp()
 	secondapp()
+	booltest()
+	stringtest()
 
 }
 
 func egVAR() {
-
-	var A int
-	A = 10.00
-	B := 20
-	var C = float32(10.01)
+	var (
+		A = 10.00
+		B = 20
+		C = float32(10.01)
+	)
 	fmt.Println(A)
 	fmt.Println(B)
 	fmt.Println(C)
@@ -41,4 +43,15 @@ func shadowing() {
 
 func firstapp() {
 	fmt.Println("My First App")
+}
+
+func booltest() {
+	var n = 1 != 1
+	fmt.Printf("%v, %T", n, n)
+}
+
+func stringtest() {
+	var s string
+	s = "this is string"
+	fmt.Println("\n", s)
 }
